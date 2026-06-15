@@ -4,14 +4,6 @@ Welcome to **Arabic with Areej**, an interactive, responsive single-page web sui
 
 ---
 
-## 🎨 What Students Will See (The App Vibe)
-
-*   **A Beautiful Cultural Palette:** The app instantly feels warm, premium, and culturally intentional. It moves away from cold, boring tech colors and uses a hand-picked theme inspired by Palestinian heritage—featuring soft **Sage Greens**, rich **Terra Cotta earth tones**, and warm **Gold highlights**. 
-*   **Crisp, Readable Fonts:** No more squinting at tiny, cramped text! The app uses two premium fonts: a sleek modern layout for English (*Plus Jakarta Sans*) and a beautifully clear, elegant script for Arabic (*Tajawal*) so that complex A2 short vowels and scripts are exceptionally easy to read and recognize.
-*   **Zero-Lag Dashboard:** A clean, sticky navigation bar sits at the top with 9 distinct tabs. When you click a tab, the screen changes **instantly** without the page needing to reload or buffer, making it a seamless space to switch between multiple lessons. 
-
----
-
 ## 🧭 Dashboard Modules Breakdown (Multi-Lesson Mode)
 
 ### 1. 🏠 Multi-Lesson Home Base 
