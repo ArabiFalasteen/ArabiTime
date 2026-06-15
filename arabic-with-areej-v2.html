@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arabic with Areej 🇵🇸 — Places & Adjectives</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sage: #4A7C59;
+  --sage-light: #6A9E78;
+  --sage-bg: #EDF5F0;
+  --sage-border: #B8D6C4;
+  --terra: #C0452F;
+  --terra-light: #E05A42;
+  --terra-bg: #FCEEED;
+  --terra-border: #E8B5B0;
+  --gold: #C98A1A;
+  --gold-bg: #FEF5E3;
+  --gold-border: #E8C87A;
+  --ink: #1C1814;
+  --ink2: #5A5450;
+  --ink3: #9A9490;
+  --cream: #F8F5F0;
+  --parchment: #F2EDE5;
+  --surface: #FFFFFF;
+  --border: #E3DDD5;
+  --r: 14px;
+  --r-sm: 8px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.12);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.6;min-height:100vh;}
+.ar{font-family:'Tajawal',sans-serif;direction:rtl;unicode-bidi:embed;}
+
+/* ─── NAV ─── */
+.nav{background:var(--surface);border-bottom:2px solid var(--border);position:sticky;top:0;z-index:200;}
+.nav-top{display:flex;align-items:center;padding:0 1.25rem;height:52px;gap:1rem;max-width:960px;margin:0 auto;}
+.nav-logo{font-size:15px;font-weight:800;color:var(--sage);letter-spacing:-0.3px;display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.nav-logo .chip{background:var(--terra);color:white;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:20px;}
+.nav-scroll{border-top:1px solid var(--border);background:var(--parchment);overflow-x:auto;scrollbar-width:none;}
+.nav-scroll::-webkit-scrollbar{display:none;}
+.nav-tabs{display:flex;max-width:960px;margin:0 auto;padding:0 1rem;}
+.nav-tab{padding:0 0.85rem;height:42px;display:flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--ink2);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;font-family:'Plus Jakarta Sans',sans-serif;transition:color .15s,border-color .15s;letter-spacing:-.1px;}
+.nav-tab:hover{color:var(--sage);}
+.nav-tab.active{color:var(--sage);border-bottom-color:var(--sage);}
+
+/* ─── LAYOUT ─── */
+.page{display:none;padding:1.75rem 1.25rem 4rem;max-width:960px;margin:0 auto;}
+.page.active{display:block;}
+
+/* ─── HERO ─── */
+.hero{background:linear-gradient(135deg,#243D1B 0%,#3A6030 45%,#1B3A25 100%);border-radius:20px;padding:2rem 2rem 1.75rem;color:white;margin-bottom:1.5rem;position:relative;overflow:hidden;}
+.hero::after{content:'🇵🇸';position:absolute;right:1.5rem;top:1.5rem;font-size:3rem;opacity:0.25;}
+.hero-arabic{font-family:'Tajawal',sans-serif;font-size:3.2rem;font-weight:900;color:#F0D57A;line-height:1.1;margin-bottom:.25rem;}
+.hero-title{font-size:17px;font-weight:700;opacity:.9;margin-bottom:.25rem;}
+.hero-sub{font-size:13px;opacity:.55;font-style:italic;}
+.hero-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:white;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:.75rem;}
+
+/* ─── HOME GRID ─── */
+.home-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:.8rem;margin-bottom:1.5rem;}
+.home-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);padding:1.1rem 1rem;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .1s;}
+.home-card:hover{border-color:var(--sage-light);box-shadow:var(--shadow);transform:translateY(-2px);}
+.hc-icon{font-size:26px;margin-bottom:.4rem;}
+.hc-title{font-size:14px;font-weight:800;margin-bottom:2px;}
+.hc-desc{font-size:12px;color:var(--ink2);}
+
+/* ─── SECTION HEADS ─── */
+.sec-head{margin-bottom:1.25rem;}
+.sec-head h2{font-size:1.25rem;font-weight:800;letter-spacing:-.4px;}
+.sec-head p{color:var(--ink2);font-size:13.5px;margin-top:3px;}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.3px;margin-bottom:.6rem;}
+.bg{background:var(--sage-bg);color:var(--sage);}
+.br{background:var(--terra-bg);color:var(--terra);}
+.bgo{background:var(--gold-bg);color:var(--gold);}
+
+/* ─── TIP BOX ─── */
+.tip{background:var(--gold-bg);border:1.5px solid var(--gold-border);border-radius:var(--r-sm);padding:.75rem 1rem;font-size:13.5px;color:#8A5A00;margin-bottom:1.1rem;display:flex;gap:8px;align-items:flex-start;}
+.tip-sage{background:var(--sage-bg);border-color:var(--sage-border);color:#2A5A3A;}
+.tip-red{background:var(--terra-bg);border-color:var(--terra-border);color:#8A2010;}
+.tip .tip-icon{flex-shrink:0;margin-top:1px;font-size:16px;}
+
+/* ─── VOCAB GRID ─── */
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.65rem;margin-bottom:1.25rem;}
+.vocab-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-sm);padding:.85rem .85rem .7rem;transition:box-shadow .15s,border-color .15s;}
+.vocab-card:hover{box-shadow:var(--shadow);border-color:var(--sage-border);}
+.vc-emoji{font-size:22px;margin-bottom:5px;}
+.vc-ar{font-family:'Tajawal',sans-serif;font-size:1.35rem;font-weight:700;direction:rtl;color:var(--ink);line-height:1.2;}
+.vc-tr{font-size:13px;color:var(--sage);font-weight:600;font-style:italic;margin:2px 0;}
+.vc-en{font-size:12px;color:var(--ink2);}
+.vc-pl{font-size:11px;color:var(--terra);margin-top:2px;font-weight:600;}
+
+/* ─── PHRASE GRID ─── */
+.phrase-grid{display:grid;gap:.7rem;grid-template-columns:1fr 1fr;}
+@media(max-width:600px){.phrase-grid{grid-template-columns:1fr;}}
+.phrase-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:1rem 1.1rem;transition:box-shadow .15s;}
+.phrase-card:hover{box-shadow:var(--shadow);}
+.pc-en{font-size:12.5px;color:var(--ink2);font-weight:600;margin-bottom:3px;}
+.pc-ar{font-family:'Tajawal',sans-serif;font-size:1.6rem;font-weight:700;direction:rtl;line-height:1.25;margin-bottom:4px;}
+.pc-tr{font-size:14px;color:var(--sage);font-weight:600;font-style:italic;}
+.pc-note{font-size:12px;color:var(--ink3);margin-top:4px;padding-top:4px;border-top:1px solid var(--border);}
+
+/* ─── ADJ TABLE ─── */
+.adj-table{width:100%;border-collapse:collapse;}
+.adj-table th{text-align:left;font-size:11.5px;font-weight:700;color:var(--ink2);text-transform:uppercase;letter-spacing:.4px;padding:10px 12px;background:var(--parchment);border-bottom:2px solid var(--border);}
+.adj-table td{padding:10px 12px;border-bottom:1px solid var(--border);font-size:14px;}
+.adj-table tr:last-child td{border-bottom:none;}
+.adj-table tr:hover td{background:var(--sage-bg);}
+.adj-ar{font-family:'Tajawal',sans-serif;font-size:1.25rem;font-weight:700;direction:rtl;}
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);}
+
+/* ─── COMPARATIVES ─── */
+.comp-grid{display:grid;gap:.6rem;margin-bottom:1.25rem;}
+.comp-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-sm);padding:.85rem 1rem;display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center;}
+.comp-adj{font-family:'Tajawal',sans-serif;font-size:1.3rem;font-weight:700;direction:rtl;}
+.comp-comp{font-family:'Tajawal',sans-serif;font-size:1.1rem;font-weight:700;direction:rtl;color:var(--sage);}
+.comp-ex{font-size:12px;color:var(--ink3);font-style:italic;grid-column:1/-1;margin-top:2px;}
+
+/* ─── FLASHCARDS ─── */
+.fc-controls{display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap;}
+.fc-chip{padding:5px 14px;border-radius:20px;border:2px solid var(--border);background:var(--surface);font-size:12.5px;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink2);transition:all .15s;}
+.fc-chip.active{border-color:var(--sage);background:var(--sage);color:white;}
+.fc-chip:hover:not(.active){border-color:var(--sage);color:var(--sage);}
+
+.fc-area{perspective:1200px;margin-bottom:1.25rem;}
+.fc-scene{width:100%;max-width:500px;height:270px;margin:0 auto;}
+.fc{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1);cursor:pointer;}
+.fc.flipped{transform:rotateY(180deg);}
+.fc-front,.fc-back{position:absolute;inset:0;border-radius:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;padding:1.5rem;border:2.5px solid var(--border);box-shadow:var(--shadow-lg);}
+.fc-front{background:var(--surface);}
+.fc-back{background:linear-gradient(135deg,#2D5C38,#3D7A4A);color:white;transform:rotateY(180deg);border-color:#2D5C38;}
+.fc-hint{font-size:11.5px;color:var(--ink3);margin-bottom:.2rem;}
+.fc-back .fc-hint{opacity:.6;color:white;}
+.fc-emoji{font-size:38px;margin-bottom:3px;}
+.fc-main{font-size:1.3rem;font-weight:700;text-align:center;}
+.fc-ar{font-family:'Tajawal',sans-serif;font-size:2.6rem;font-weight:900;direction:rtl;text-align:center;line-height:1.15;}
+.fc-tr{font-size:1.15rem;font-style:italic;opacity:.85;font-weight:600;}
+.fc-extra{font-size:12px;opacity:.6;text-align:center;margin-top:4px;}
+.fc-gender{font-size:12px;background:rgba(255,255,255,.15);padding:2px 9px;border-radius:20px;margin-top:4px;}
+
+.fc-nav{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-bottom:.75rem;}
+.fc-btn{width:44px;height:44px;border-radius:50%;border:2px solid var(--border);background:var(--surface);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;font-family:sans-serif;}
+.fc-btn:hover{border-color:var(--sage);background:var(--sage-bg);}
+.fc-count{font-size:14px;font-weight:800;color:var(--ink2);min-width:70px;text-align:center;}
+.fc-bar{height:6px;background:var(--border);border-radius:3px;max-width:500px;margin:.25rem auto;}
+.fc-bar-fill{height:100%;background:linear-gradient(90deg,var(--sage-light),var(--sage));border-radius:3px;transition:width .4s;}
+.fc-shuffle{display:block;margin:.75rem auto 0;padding:7px 20px;border-radius:20px;border:2px solid var(--border);background:var(--surface);font-size:12.5px;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink2);transition:all .15s;}
+.fc-shuffle:hover{border-color:var(--sage);color:var(--sage);}
+.fc-known-btn{display:block;margin:.5rem auto 0;padding:7px 20px;border-radius:20px;border:2px solid var(--sage);background:var(--sage-bg);font-size:12.5px;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;color:var(--sage);transition:all .15s;}
+.fc-known-btn:hover{background:var(--sage);color:white;}
+.fc-known-count{text-align:center;font-size:12.5px;color:var(--ink3);margin-top:.4rem;}
+
+/* ─── SWIPE INDICATORS ─── */
+.swipe-hint{display:flex;justify-content:space-between;max-width:500px;margin:0 auto .5rem;font-size:11.5px;color:var(--ink3);padding:0 .5rem;}
+
+/* ─── MATCH EXERCISE ─── */
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
+.match-col{display:flex;flex-direction:column;gap:.5rem;}
+.match-item{padding:.65rem .9rem;border-radius:var(--r-sm);border:2px solid var(--border);background:var(--surface);font-size:14px;font-weight:600;cursor:pointer;transition:all .15s;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;}
+.match-item.arabic-item{font-family:'Tajawal',sans-serif;font-size:1.25rem;direction:rtl;}
+.match-item:hover:not(.matched):not(.disabled){border-color:var(--sage-light);background:var(--sage-bg);}
+.match-item.selected{border-color:var(--gold);background:var(--gold-bg);color:var(--gold);}
+.match-item.matched{border-color:var(--sage);background:var(--sage-bg);color:var(--sage);cursor:default;}
+.match-item.wrong-flash{border-color:var(--terra)!important;background:var(--terra-bg)!important;animation:shake .3s ease;}
+@keyframes shake{0%,100%{transform:translateX(0);}25%{transform:translateX(-6px);}75%{transform:translateX(6px);}}
+
+/* ─── FILL BLANK ─── */
+.fill-q{font-size:1rem;font-weight:600;margin-bottom:.65rem;line-height:1.8;}
+.blank{display:inline-block;min-width:100px;border-bottom:2.5px solid var(--sage);margin:0 4px;vertical-align:bottom;padding-bottom:1px;}
+.fill-inp{width:100%;padding:.6rem .9rem;border-radius:var(--r-sm);border:2px solid var(--border);font-size:14.5px;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);outline:none;transition:border-color .15s;background:var(--cream);}
+.fill-inp:focus{border-color:var(--sage);background:white;}
+.fill-inp.correct{border-color:var(--sage);background:var(--sage-bg);}
+.fill-inp.wrong{border-color:var(--terra);background:var(--terra-bg);}
+.fill-fb{margin-top:.5rem;padding:.6rem .9rem;border-radius:var(--r-sm);font-size:13px;font-weight:600;display:none;}
+.fill-fb.show{display:block;}
+.fill-fb.correct{background:var(--sage-bg);color:var(--sage);border:1.5px solid var(--sage-border);}
+.fill-fb.wrong{background:var(--terra-bg);color:var(--terra);border:1.5px solid var(--terra-border);}
+
+/* ─── QUIZ ─── */
+.quiz-prog-bar{height:7px;background:var(--border);border-radius:4px;margin-bottom:1.25rem;overflow:hidden;}
+.quiz-prog-fill{height:100%;background:linear-gradient(90deg,var(--terra-light),var(--terra));border-radius:4px;transition:width .4s;}
+.quiz-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:.85rem;font-size:13px;color:var(--ink2);font-weight:700;}
+.quiz-box{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);padding:1.5rem;}
+.quiz-prompt{font-size:12.5px;color:var(--ink3);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:.5rem;}
+.quiz-q{font-size:1.05rem;font-weight:700;margin-bottom:1.1rem;color:var(--ink);}
+.quiz-q .ar-big{font-family:'Tajawal',sans-serif;font-size:2.2rem;font-weight:900;direction:rtl;display:block;line-height:1.2;margin:.25rem 0;}
+.quiz-opts{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
+.quiz-opt{padding:.8rem .9rem;border-radius:var(--r-sm);border:2px solid var(--border);background:var(--surface);font-size:14px;font-weight:600;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);text-align:left;transition:all .15s;line-height:1.4;}
+.quiz-opt:hover:not(:disabled){border-color:var(--sage);background:var(--sage-bg);}
+.quiz-opt:disabled{cursor:default;}
+.quiz-opt.correct{border-color:var(--sage)!important;background:var(--sage-bg)!important;color:var(--sage)!important;}
+.quiz-opt.wrong{border-color:var(--terra)!important;background:var(--terra-bg)!important;color:var(--terra)!important;}
+.quiz-fb{margin-top:.85rem;padding:.7rem 1rem;border-radius:var(--r-sm);font-size:13.5px;font-weight:600;display:none;}
+.quiz-fb.show{display:block;}
+.quiz-fb.correct{background:var(--sage-bg);color:var(--sage);border:1.5px solid var(--sage-border);}
+.quiz-fb.wrong{background:var(--terra-bg);color:var(--terra);border:1.5px solid var(--terra-border);}
+.quiz-result{text-align:center;padding:2.5rem 1.5rem;background:var(--surface);border-radius:var(--r);border:2px solid var(--border);}
+.quiz-result .big{font-size:4.5rem;font-weight:900;color:var(--sage);line-height:1;margin-bottom:.5rem;}
+.quiz-result .praise{font-size:1.1rem;font-weight:800;margin-bottom:.4rem;}
+.quiz-result .sub{font-size:14px;color:var(--ink2);}
+
+/* ─── BUTTONS ─── */
+.btn{padding:.65rem 1.35rem;border-radius:10px;background:var(--sage);color:white;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:background .15s;margin-top:.65rem;}
+.btn:hover{background:var(--sage-light);}
+.btn-sec{background:var(--surface);color:var(--ink2);border:2px solid var(--border);}
+.btn-sec:hover{border-color:var(--sage);color:var(--sage);background:var(--sage-bg);}
+.btn-sm{padding:.45rem 1rem;font-size:13px;margin-top:0;}
+
+/* ─── EX BOX ─── */
+.ex-box{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);padding:1.25rem;margin-bottom:1rem;}
+.ex-label{font-size:11px;font-weight:700;color:var(--terra);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.5rem;}
+
+/* ─── GRAMMAR ─── */
+.inner-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:1.5rem;overflow-x:auto;scrollbar-width:none;}
+.inner-tabs::-webkit-scrollbar{display:none;}
+.inner-tab{padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--ink2);cursor:pointer;border-bottom:2.5px solid transparent;background:none;border-top:none;border-left:none;border-right:none;font-family:'Plus Jakarta Sans',sans-serif;transition:color .15s;white-space:nowrap;}
+.inner-tab.active{color:var(--sage);border-bottom-color:var(--sage);}
+.inner-panel{display:none;}
+.inner-panel.active{display:block;}
+
+/* ─── CULTURAL NOTES ─── */
+.culture-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:.85rem;}
+.culture-head{background:linear-gradient(135deg,#243D1B,#3A6030);color:white;padding:.85rem 1.1rem;font-size:14px;font-weight:700;display:flex;align-items:center;gap:.5rem;}
+.culture-body{padding:1rem 1.1rem;font-size:14px;color:var(--ink);}
+.culture-body p{margin-bottom:.5rem;}
+.culture-body .ar-ex{font-family:'Tajawal',sans-serif;direction:rtl;font-size:1.15rem;font-weight:600;color:var(--sage);display:block;margin:.25rem 0;}
+
+/* ─── PRAISE ─── */
+.praise{background:linear-gradient(90deg,var(--sage-bg),var(--gold-bg));border:1.5px solid var(--sage-border);border-radius:var(--r-sm);padding:.7rem 1rem;font-size:13.5px;font-weight:700;color:var(--sage);margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem;}
+
+/* ─── EVIDENCE TAG ─── */
+.evidence{font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:5px;padding:.4rem 0;font-style:italic;}
+
+/* ─── ROLEPLAY ─── */
+.rp-chat{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.25rem;}
+.rp-wrap{display:flex;gap:.6rem;align-items:flex-start;}
+.rp-wrap.right{flex-direction:row-reverse;}
+.rp-av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.av-t{background:var(--sage-bg);border:2px solid var(--sage-light);}
+.av-s{background:var(--terra-bg);border:2px solid var(--terra-light);}
+.rp-bubble{max-width:78%;padding:.85rem 1rem;border-radius:16px;border:1.5px solid var(--border);background:var(--surface);}
+.rp-wrap.right .rp-bubble{background:var(--terra-bg);border-color:var(--terra-border);}
+.rp-name{font-size:10.5px;font-weight:700;color:var(--ink3);margin-bottom:3px;}
+.rp-ar{font-family:'Tajawal',sans-serif;font-size:1.2rem;font-weight:700;direction:rtl;line-height:1.3;margin-bottom:3px;}
+.rp-tr{font-size:13px;font-style:italic;color:var(--sage);font-weight:600;}
+.rp-en{font-size:12.5px;color:var(--ink2);margin-top:3px;}
+.rp-fill{background:var(--gold-bg);border:2px dashed var(--gold);border-radius:var(--r-sm);padding:.7rem .9rem;}
+.rp-fill-label{font-size:11.5px;color:var(--gold);font-weight:700;margin-bottom:5px;}
+
+/* ─── RESP ─── */
+@media(max-width:480px){
+  .quiz-opts{grid-template-columns:1fr;}
+  .hero-arabic{font-size:2.6rem;}
+  .fc-scene{height:240px;}
+}
+
+/* ─── HOMEWORK ─── */
+.hw-item{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:1rem 1.1rem;display:flex;gap:.9rem;align-items:flex-start;margin-bottom:.75rem;}
+.hw-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.hw-icon.s{background:var(--sage-bg);}
+.hw-icon.r{background:var(--terra-bg);}
+.hw-icon.g{background:var(--gold-bg);}
+.hw-content h4{font-size:14px;font-weight:800;margin-bottom:2px;}
+.hw-content p{font-size:13px;color:var(--ink2);}
+.hw-ar{font-family:'Tajawal',sans-serif;direction:rtl;font-size:1.1rem;font-weight:700;color:var(--sage);margin-top:4px;}
+
+/* ─── VERB BOX ─── */
+.verb-box{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:1.25rem;}
+.verb-head{background:linear-gradient(90deg,var(--sage),var(--sage-light));color:white;padding:.75rem 1.1rem;display:flex;align-items:center;gap:.75rem;}
+.verb-head .ar{font-size:1.5rem;font-weight:700;}
+.verb-head .en{font-size:13px;opacity:.9;}
+.verb-forms{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);}
+.vf{padding:.8rem .9rem;border-right:1px solid var(--border);text-align:center;}
+.vf:last-child{border-right:none;}
+.vf-label{font-size:11px;color:var(--ink3);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px;}
+.vf-ar{font-family:'Tajawal',sans-serif;font-size:1.4rem;font-weight:700;direction:rtl;color:var(--ink);margin-bottom:2px;}
+.vf-tr{font-size:13.5px;color:var(--terra);font-weight:600;font-style:italic;}
+.vf.hi{background:var(--gold-bg);}
+.vf.hi .vf-ar{color:var(--gold);}
+.vf.hi .vf-tr{color:var(--gold);}
+.verb-ex{background:#1C1814;color:white;padding:.85rem 1.1rem;display:flex;flex-direction:column;gap:3px;}
+.ve-ar{font-family:'Tajawal',sans-serif;font-size:1.25rem;font-weight:700;direction:rtl;color:#F0D57A;}
+.ve-tr{font-size:13px;font-style:italic;opacity:.7;}
+.ve-en{font-size:12.5px;opacity:.55;}
+
+/* ─── QUIZ MODE SELECTOR ─── */
+.mode-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+.mode-pill{padding:6px 16px;border-radius:20px;border:2px solid var(--border);background:var(--surface);font-size:13px;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink2);transition:all .15s;}
+.mode-pill:hover{border-color:var(--sage);color:var(--sage);}
+.mode-pill.active{border-color:var(--terra);background:var(--terra);color:white;}
+
+/* ─── BARGAINING BOX ─── */
+.barg-box{background:var(--surface);border:2px solid var(--gold-border);border-radius:var(--r);overflow:hidden;margin-bottom:1.25rem;}
+.barg-head{background:linear-gradient(90deg,#7A4A00,#C98A1A);color:white;padding:.75rem 1.1rem;font-size:14px;font-weight:700;}
+.barg-body{padding:1rem 1.1rem;}
+.barg-row{display:flex;align-items:baseline;gap:.75rem;margin-bottom:.6rem;padding-bottom:.6rem;border-bottom:1px solid var(--border);}
+.barg-row:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.barg-ar{font-family:'Tajawal',sans-serif;font-size:1.15rem;font-weight:700;direction:rtl;min-width:160px;}
+.barg-tr{font-size:13px;color:var(--terra);font-style:italic;font-weight:600;}
+.barg-en{font-size:12.5px;color:var(--ink2);}
+
+/* ─── PULSE ANIMATION ─── */
+@keyframes pulse-correct{0%,100%{transform:scale(1);}50%{transform:scale(1.04);}}
+.pulse-ok{animation:pulse-correct .35s ease;}
+
+/* ─── HR ─── */
+hr.div{border:none;border-top:1.5px solid var(--border);margin:1.5rem 0;}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-top">
+    <div class="nav-logo">🌿 Arabic with Areej <span class="chip">🇵🇸 LESSON 2</span></div>
+  </div>
+  <div class="nav-scroll">
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showPage('home',this)">🏠 Home</button>
+      <button class="nav-tab" onclick="showPage('vocab',this)">📍 Vocab</button>
+      <button class="nav-tab" onclick="showPage('grammar',this)">📐 Grammar</button>
+      <button class="nav-tab" onclick="showPage('flashcards',this)">🃏 Flashcards</button>
+      <button class="nav-tab" onclick="showPage('quiz',this)">🔥 Quiz</button>
+      <button class="nav-tab" onclick="showPage('exercises',this)">✏️ Exercises</button>
+      <button class="nav-tab" onclick="showPage('roleplay',this)">🎭 Role-Play</button>
+      <button class="nav-tab" onclick="showPage('culture',this)">🕌 Culture</button>
+      <button class="nav-tab" onclick="showPage('homework',this)">📝 Homework</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ HOME ═══════════ -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    <div class="hero-badge">Palestinian Arabic · Places & Adjectives</div>
+    <div class="hero-arabic">الأماكن والصفات</div>
+    <div class="hero-title">Places, Adjectives & Bargaining</div>
+    <div class="hero-sub">Taught by Areej 🇵🇸 — your Palestinian Arabic teacher</div>
+  </div>
+
+  <div class="praise">✨ يلا! Welcome to today's lesson. Areej is proud of you — now let's make it stick!</div>
+
+  <div class="home-grid">
+    <div class="home-card" onclick="showPage('vocab',document.querySelectorAll('.nav-tab')[1])">
+      <div class="hc-icon">📍</div>
+      <div class="hc-title">Vocabulary</div>
+      <div class="hc-desc">Places, adjectives & key phrases</div>
+    </div>
+    <div class="home-card" onclick="showPage('grammar',document.querySelectorAll('.nav-tab')[2])">
+      <div class="hc-icon">📐</div>
+      <div class="hc-title">Grammar</div>
+      <div class="hc-desc">Adjective agreement & comparatives</div>
+    </div>
+    <div class="home-card" onclick="showPage('flashcards',document.querySelectorAll('.nav-tab')[3])">
+      <div class="hc-icon">🃏</div>
+      <div class="hc-title">Flashcards</div>
+      <div class="hc-desc">Flip, filter, shuffle & mark known</div>
+    </div>
+    <div class="home-card" onclick="showPage('quiz',document.querySelectorAll('.nav-tab')[4])">
+      <div class="hc-icon">🔥</div>
+      <div class="hc-title">Quiz</div>
+      <div class="hc-desc">Multiple choice — all transliterations accepted</div>
+    </div>
+    <div class="home-card" onclick="showPage('exercises',document.querySelectorAll('.nav-tab')[5])">
+      <div class="hc-icon">✏️</div>
+      <div class="hc-title">Exercises</div>
+      <div class="hc-desc">Match, fill blanks & open production</div>
+    </div>
+    <div class="home-card" onclick="showPage('roleplay',document.querySelectorAll('.nav-tab')[6])">
+      <div class="hc-icon">🎭</div>
+      <div class="hc-title">Role-Play</div>
+      <div class="hc-desc">Bargain in the souk with Areej</div>
+    </div>
+    <div class="home-card" onclick="showPage('culture',document.querySelectorAll('.nav-tab')[7])">
+      <div class="hc-icon">🕌</div>
+      <div class="hc-title">Culture</div>
+      <div class="hc-desc">Palestinian places & traditions</div>
+    </div>
+    <div class="home-card" onclick="showPage('homework',document.querySelectorAll('.nav-tab')[8])">
+      <div class="hc-icon">📝</div>
+      <div class="hc-title">Homework</div>
+      <div class="hc-desc">5 tasks to cement your learning</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <span class="tip-icon">🧠</span>
+    <span><strong>Areej's #1 tip:</strong> Say every phrase out loud — even in a whisper. Your mouth needs to learn it, not just your eyes. Retrieval practice beats re-reading by 50%+!</span>
+  </div>
+</div>
+
+<!-- ═══════════ VOCAB ═══════════ -->
+<div id="page-vocab" class="page">
+  <div class="sec-head">
+    <div class="badge bg">📍 Vocabulary</div>
+    <h2>Places & Key Words</h2>
+    <p>All vocabulary from this lesson — hover to highlight</p>
+  </div>
+
+  <div class="inner-tabs">
+    <button class="inner-tab active" onclick="showPanel('v-places',this)">🗺️ Places</button>
+    <button class="inner-tab" onclick="showPanel('v-adj',this)">✨ Adjectives</button>
+    <button class="inner-tab" onclick="showPanel('v-phrases',this)">💬 Phrases</button>
+    <button class="inner-tab" onclick="showPanel('v-extras',this)">🐸 Extras</button>
+  </div>
+
+  <div id="v-places" class="inner-panel active">
+    <div class="tip tip-sage">
+      <span class="tip-icon">💡</span>
+      <span><strong>Areej says:</strong> Masculine words → adjective stays as-is. Feminine words (often ending in ة) → add ة to the adjective too!</span>
+    </div>
+    <div class="vocab-grid" id="vg-places"></div>
+  </div>
+
+  <div id="v-adj" class="inner-panel">
+    <div class="tip">
+      <span class="tip-icon">📌</span>
+      <span>All adjectives have <strong>masculine and feminine</strong> forms. In Arabic the adjective FOLLOWS and MATCHES the noun's gender.</span>
+    </div>
+    <div class="vocab-grid" id="vg-adj"></div>
+  </div>
+
+  <div id="v-phrases" class="inner-panel">
+    <div class="phrase-grid" id="pg-phrases"></div>
+  </div>
+
+  <div id="v-extras" class="inner-panel">
+    <div class="tip tip-sage"><span class="tip-icon">🐸</span><span>Extra vocab from Areej's lessons — wild, important & fun!</span></div>
+    <div class="vocab-grid" id="vg-extras"></div>
+  </div>
+</div>
+
+<!-- ═══════════ GRAMMAR ═══════════ -->
+<div id="page-grammar" class="page">
+  <div class="sec-head">
+    <div class="badge bg">📐 Grammar</div>
+    <h2>How Arabic Adjectives Work</h2>
+  </div>
+
+  <div class="inner-tabs">
+    <button class="inner-tab active" onclick="showPanel('g-agree',this)">Adjective Agreement</button>
+    <button class="inner-tab" onclick="showPanel('g-comp',this)">Comparatives</button>
+    <button class="inner-tab" onclick="showPanel('g-prep',this)">Prepositions</button>
+    <button class="inner-tab" onclick="showPanel('g-conj',this)">Key Verbs</button>
+  </div>
+
+  <div id="g-agree" class="inner-panel active">
+    <div class="tip tip-sage">
+      <span class="tip-icon">💡</span>
+      <span><strong>The Golden Rule:</strong> Adjectives come AFTER the noun and MATCH its gender. Masculine → use base form. Feminine (noun ends -a) → add ة.</span>
+    </div>
+    <div class="tbl-wrap" style="margin-bottom:1.25rem;">
+      <table class="adj-table">
+        <thead><tr><th>Emoji</th><th>English</th><th>Masculine م</th><th>Feminine ف</th><th>Transliteration</th></tr></thead>
+        <tbody id="adj-table-body"></tbody>
+      </table>
+    </div>
+    <div class="sec-head" style="margin-top:1.5rem;"><h2 style="font-size:1rem;">✍️ Examples from your lessons</h2></div>
+    <div class="phrase-grid" id="adj-examples"></div>
+  </div>
+
+  <div id="g-comp" class="inner-panel">
+    <div class="tip">
+      <span class="tip-icon">📈</span>
+      <span>Comparatives in Arabic usually add <strong>أ</strong> at the beginning. Superlatives use the same form with context like "the most..."</span>
+    </div>
+    <div id="comp-grid-el"></div>
+  </div>
+
+  <div id="g-prep" class="inner-panel">
+    <div class="tip tip-sage">
+      <span class="tip-icon">🏠</span>
+      <span>These prepositions describe location — essential for giving directions in the souk!</span>
+    </div>
+    <div class="vocab-grid" id="prep-grid-el"></div>
+  </div>
+
+  <div id="g-conj" class="inner-panel">
+    <div class="tip tip-red">
+      <span class="tip-icon">⚡</span>
+      <span>Key verbs from this lesson — زار (to visit), سمع (to hear), قلق (to worry)</span>
+    </div>
+    <div id="verb-conj-el"></div>
+  </div>
+</div>
+
+<!-- ═══════════ FLASHCARDS ═══════════ -->
+<div id="page-flashcards" class="page">
+  <div class="sec-head">
+    <div class="badge bg">🃏 Flashcards</div>
+    <h2>Flip & Remember</h2>
+    <p>Tap the card to flip. Arrow keys to navigate. Mark cards you know!</p>
+  </div>
+
+  <div class="fc-controls" id="fc-filters">
+    <button class="fc-chip active" onclick="setFcFilter('all',this)">All</button>
+    <button class="fc-chip" onclick="setFcFilter('places',this)">🗺️ Places</button>
+    <button class="fc-chip" onclick="setFcFilter('adjectives',this)">✨ Adjectives</button>
+    <button class="fc-chip" onclick="setFcFilter('phrases',this)">💬 Phrases</button>
+    <button class="fc-chip" onclick="setFcFilter('extras',this)">🐸 Extras</button>
+    <button class="fc-chip" onclick="setFcFilter('unknown',this)">⚠️ To Learn</button>
+  </div>
+
+  <div class="swipe-hint"><span>◀ Prev</span><span>Tap to flip</span><span>Next ▶</span></div>
+
+  <div class="fc-area">
+    <div class="fc-scene">
+      <div class="fc" id="mainCard" onclick="flipCard()">
+        <div class="fc-front">
+          <div class="fc-hint" id="fcFrontHint">Tap to see Arabic</div>
+          <div class="fc-emoji" id="fcEmoji">🌿</div>
+          <div class="fc-main" id="fcMain">–</div>
+          <div style="font-size:12px;color:var(--ink3);margin-top:4px;" id="fcCat"></div>
+        </div>
+        <div class="fc-back">
+          <div class="fc-hint">Arabic</div>
+          <div class="fc-ar" id="fcAr">–</div>
+          <div class="fc-tr" id="fcTr">–</div>
+          <div class="fc-extra" id="fcExtra"></div>
+          <div class="fc-gender" id="fcGender"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fc-nav">
+    <button class="fc-btn" onclick="fcNav(-1)" title="Previous">◀</button>
+    <div class="fc-count" id="fcCount">1 / 1</div>
+    <button class="fc-btn" onclick="fcNav(1)" title="Next">▶</button>
+  </div>
+  <div class="fc-bar"><div class="fc-bar-fill" id="fcBarFill"></div></div>
+  <button class="fc-shuffle" onclick="shuffleDeck()">🔀 Shuffle deck</button>
+  <button class="fc-known-btn" id="knownBtn" onclick="markKnown()">✓ I know this</button>
+  <div class="fc-known-count" id="knownCount"></div>
+  <div class="evidence" style="margin-top:.75rem;">🧠 Retrieval practice — trying to recall before seeing — beats re-reading by 50%+</div>
+</div>
+
+<!-- ═══════════ QUIZ ═══════════ -->
+<div id="page-quiz" class="page">
+  <div class="sec-head">
+    <div class="badge br">🔥 Quiz</div>
+    <h2>No Peeking!</h2>
+    <p>All common transliteration variants are accepted as correct.</p>
+  </div>
+
+  <div class="mode-pills">
+    <button class="mode-pill" onclick="startQuiz('all',this)">🎲 All mixed</button>
+    <button class="mode-pill" onclick="startQuiz('places',this)">🗺️ Places</button>
+    <button class="mode-pill" onclick="startQuiz('adjectives',this)">✨ Adjectives</button>
+    <button class="mode-pill" onclick="startQuiz('ar_to_en',this)">Arabic → English</button>
+    <button class="mode-pill" onclick="startQuiz('en_to_ar',this)">English → Arabic</button>
+  </div>
+
+  <div id="quizArea" style="display:none;">
+    <div class="quiz-meta">
+      <span id="quizLabel">Question 1 of 10</span>
+      <span id="quizScoreLive">Score: 0</span>
+    </div>
+    <div class="quiz-prog-bar"><div class="quiz-prog-fill" id="quizBar" style="width:0%"></div></div>
+    <div class="quiz-box" id="quizBox">
+      <div class="quiz-prompt" id="quizPrompt">What does this mean?</div>
+      <div class="quiz-q" id="quizQ">–</div>
+      <div class="quiz-opts" id="quizOpts"></div>
+      <div class="quiz-fb" id="quizFb"></div>
+    </div>
+  </div>
+  <div id="quizResult" style="display:none;" class="quiz-result">
+    <div class="big" id="resScore">–</div>
+    <div class="praise" id="resPraise">–</div>
+    <div class="sub" id="resSub">–</div>
+    <button class="btn" onclick="startQuiz(lastQuizMode,null)" style="margin-top:1rem;">↺ Try again</button>
+    <button class="btn btn-sec" onclick="startQuiz('all',null)" style="margin-top:.5rem;margin-left:.5rem;">🎲 Mix it up</button>
+  </div>
+
+  <div id="quizStart" style="text-align:center;padding:2.5rem 1rem;">
+    <div style="font-size:3rem;margin-bottom:.75rem;">🎯</div>
+    <p style="color:var(--ink2);font-size:14px;">Choose a quiz mode above to start!</p>
+  </div>
+</div>
+
+<!-- ═══════════ EXERCISES ═══════════ -->
+<div id="page-exercises" class="page">
+  <div class="sec-head">
+    <div class="badge br">✏️ Exercises</div>
+    <h2>3 Ways to Practice</h2>
+    <p>Each exercise type activates a different part of memory. Do all three!</p>
+  </div>
+
+  <!-- Ex 1: Match -->
+  <div class="ex-box">
+    <div class="ex-label">Exercise 1 — Match the Meaning</div>
+    <p style="font-size:13.5px;color:var(--ink2);margin-bottom:1rem;">Tap Arabic → tap its English meaning. Match all pairs!</p>
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.85rem;">
+      <button class="btn btn-sm btn-sec" onclick="startMatch('places')">🗺️ Places</button>
+      <button class="btn btn-sm btn-sec" onclick="startMatch('adj')">✨ Adjectives</button>
+      <button class="btn btn-sm btn-sec" onclick="startMatch('mixed')">🎲 Mixed</button>
+    </div>
+    <div class="match-grid">
+      <div class="match-col" id="matchLeft"></div>
+      <div class="match-col" id="matchRight"></div>
+    </div>
+    <div id="matchResult" style="margin-top:.75rem;display:none;" class="fill-fb correct show">🎉 يلا! مش صدق — I can't believe it! All matched perfectly!</div>
+    <button class="btn btn-sec btn-sm" onclick="resetCurrentMatch()" style="margin-top:.65rem;">↺ Reset</button>
+  </div>
+
+  <!-- Ex 2: Fill blank -->
+  <div class="ex-box">
+    <div class="ex-label">Exercise 2 — Fill in the Blank</div>
+    <p style="font-size:13.5px;color:var(--ink2);margin-bottom:1rem;">Type the transliteration. Multiple spellings accepted!</p>
+    <div id="fillContainer"></div>
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.25rem;">
+      <button class="btn" onclick="checkFills()">Check Answers</button>
+      <button class="btn btn-sec" onclick="resetFills()">↺ Reset</button>
+    </div>
+    <div class="evidence">🧠 Testing yourself (even if wrong!) strengthens memory more than re-reading</div>
+  </div>
+
+  <!-- Ex 3: Open Production -->
+  <div class="ex-box">
+    <div class="ex-label">Exercise 3 — You Talk! Open Production</div>
+    <p style="font-size:13.5px;color:var(--ink2);margin-bottom:1rem;">Answer in Palestinian Arabic. Any sentence — even 2 words counts!</p>
+    <div id="openProd"></div>
+  </div>
+</div>
+
+<!-- ═══════════ ROLEPLAY ═══════════ -->
+<div id="page-roleplay" class="page">
+  <div class="sec-head">
+    <div class="badge br">🎭 Role-Play</div>
+    <h2>في السوق — At the Market</h2>
+    <p>Monica is shopping in the Nablus souk. Read Areej's lines, fill in Monica's responses!</p>
+  </div>
+  <div class="rp-chat" id="rpChat"></div>
+  <div class="tip">
+    <span class="tip-icon">💡</span>
+    <span><strong>Yellow = your turn.</strong> Reveal the answer, then say the FULL sentence out loud. That's what makes it stick in your brain!</span>
+  </div>
+</div>
+
+<!-- ═══════════ CULTURE ═══════════ -->
+<div id="page-culture" class="page">
+  <div class="sec-head">
+    <div class="badge bgo">🕌 Palestinian Culture</div>
+    <h2>Context Makes Language Come Alive</h2>
+    <p>From Areej, with love 🇵🇸</p>
+  </div>
+
+  <div class="culture-card">
+    <div class="culture-head">🛒 Bargaining — المساومة</div>
+    <div class="culture-body">
+      <p>In traditional Palestinian markets, prices are <strong>negotiable</strong>. Bargaining isn't rude — it's expected and even enjoyed as a social ritual.</p>
+      <span class="ar-ex">بكم هاد؟ — How much is this?</span>
+      <span class="ar-ex">هاد غالي — This is expensive</span>
+      <span class="ar-ex">يسلمو! — Thank you / May you be protected</span>
+      <p style="color:var(--ink2);font-size:13.5px;">Start with <em>bkam haad?</em>, then shake your head gently and say <em>haad ghaali</em>. The seller will often lower the price — sometimes several times!</p>
+    </div>
+  </div>
+
+  <div class="culture-card">
+    <div class="culture-head">🧆 Nablus — نابلس</div>
+    <div class="culture-body">
+      <p>The old market of Nablus is famous for:</p>
+      <p>• <strong>كنافة</strong> (kanafeh) — the legendary cheese pastry</p>
+      <p>• <strong>صابون النابلسي</strong> — Nabulsi olive oil soap, exported since the 10th century</p>
+      <p>• <strong>Spices & za'atar</strong> — the fragrance of every alley</p>
+      <p style="margin-top:.5rem;color:var(--ink2);font-size:13.5px;">Wandering through the souk is a cultural experience — every shop has a story, every shopkeeper wants to offer you tea.</p>
+    </div>
+  </div>
+
+  <div class="culture-card">
+    <div class="culture-head">🫒 Bethlehem — بيت لحم</div>
+    <div class="culture-body">
+      <p>Bethlehem is known for exquisite handcrafts:</p>
+      <p>• <strong>Olive wood carvings</strong> — nativity scenes, crosses, intricate boxes</p>
+      <p>• <strong>Mother-of-pearl jewelry</strong></p>
+      <p>• <strong>Handwoven embroidery (tatreez)</strong> — the red cross-stitch patterns you'll see everywhere</p>
+      <p style="margin-top:.5rem;color:var(--ink2);font-size:13.5px;">Shopping here supports local Palestinian artisans and families directly. Every purchase has a story behind it.</p>
+    </div>
+  </div>
+
+  <div class="culture-card">
+    <div class="culture-head">☕ Coffee Dialects — القهوة</div>
+    <div class="culture-body">
+      <p>Arabic coffee has many names across the Arab world:</p>
+      <span class="ar-ex">بدي قهوة / أهوة / كهوة / گهوة</span>
+      <p style="color:var(--ink2);font-size:13.5px;">In Palestinian Arabic you might hear <em>qahwa</em>, <em>ahwa</em>, or <em>kahwa</em> — all mean the same thing. Don't worry about the "correct" way, just ask and you'll get something delicious!</p>
+      <span class="ar-ex">يسلمو — yislamu — Thank you (lit. "May you be protected")</span>
+    </div>
+  </div>
+
+  <div class="tip">
+    <span class="tip-icon">🌿</span>
+    <span>Language and culture are inseparable. When you learn <em>المساومة</em> (bargaining), you're not just learning words — you're stepping into a tradition thousands of years old.</span>
+  </div>
+</div>
+
+<!-- ═══════════ HOMEWORK ═══════════ -->
+<div id="page-homework" class="page">
+  <div class="sec-head">
+    <div class="badge bgo">📝 Homework</div>
+    <h2>5 Tasks for This Week</h2>
+    <p>Areej always says: it's not about how much you study — it's about HOW you practice!</p>
+  </div>
+
+  <div class="praise">🌟 يلا، بالتوفيق! — <em>Yalla, bil-tawfiq!</em> — Go, with success!</div>
+
+  <div class="hw-item">
+    <div class="hw-icon s">🎙️</div>
+    <div class="hw-content">
+      <h4>Describe Your Neighbourhood</h4>
+      <p>Say 5 sentences about places near your home using adjectives:</p>
+      <div class="hw-ar">في حيّي في بيت كبير وسوق قريب ومدرسة بعيدة</div>
+      <p style="font-size:12px;color:var(--ink3);margin-top:3px;font-style:italic;">fi 7ayyi fi beit kbiir o sooq 2ariib o madrasa b3iide</p>
+    </div>
+  </div>
+  <div class="hw-item">
+    <div class="hw-icon r">🛒</div>
+    <div class="hw-content">
+      <h4>Practice Bargaining Out Loud</h4>
+      <p>Role-play a market scene — say all 3 lines without looking:</p>
+      <div class="hw-ar">بكم هاد؟ — هاد غالي — يسلمو!</div>
+    </div>
+  </div>
+  <div class="hw-item">
+    <div class="hw-icon g">✍️</div>
+    <div class="hw-content">
+      <h4>Write Adjective Pairs</h4>
+      <p>Write 8 noun+adjective pairs, alternating m/f. Example:</p>
+      <div class="hw-ar">بيت كبير — مدرسة كبيرة — سوق رخيص — حديقة رخيصة</div>
+    </div>
+  </div>
+  <div class="hw-item">
+    <div class="hw-icon s">🔀</div>
+    <div class="hw-content">
+      <h4>Do the Flashcards 3 Times</h4>
+      <p>Shuffle the deck, go through all cards, then do only the "To Learn" ones. Spaced repetition!</p>
+    </div>
+  </div>
+  <div class="hw-item">
+    <div class="hw-icon r">🎯</div>
+    <div class="hw-content">
+      <h4>Beat Your Quiz Score</h4>
+      <p>Take the mixed quiz and aim for 8/10 or higher. Do it twice — your second score will always be better!</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+//  DATA
+// ═══════════════════════════════════════════
+
+const PLACES = [
+  {emoji:'🏠',ar:'بيت',tr:'beit / beet',en:'house / home',plural:'بيوت — buyoot',cat:'places',gender:'m'},
+  {emoji:'🛣️',ar:'شارع',tr:'shaari3',en:'street',plural:'شوارع — shawaari3',cat:'places',gender:'m'},
+  {emoji:'🏪',ar:'سوق',tr:'sooq / soog',en:'market / bazaar',plural:'أسواق — aswaaق',cat:'places',gender:'m'},
+  {emoji:'🏫',ar:'مدرسة',tr:'madrasa',en:'school',plural:'مدارس — madaaris',cat:'places',gender:'f'},
+  {emoji:'🏥',ar:'مستشفى',tr:'mustashfa',en:'hospital',plural:'مستشفيات',cat:'places',gender:'m'},
+  {emoji:'🕌',ar:'مسجد',tr:'masjid',en:'mosque',plural:'مساجد — masaajid',cat:'places',gender:'m'},
+  {emoji:'⛪',ar:'كنيسة',tr:'kniisa / kaneesa',en:'church',plural:'كنائس — kanaa\'is',cat:'places',gender:'f'},
+  {emoji:'🌳',ar:'حديقة',tr:'7adiiqa / 7adeeqa',en:'garden / park',plural:'حدائق — 7adaa\'iq',cat:'places',gender:'f'},
+  {emoji:'🍽️',ar:'مطعم',tr:'mat3am',en:'restaurant',plural:'مطاعم — mataa3im',cat:'places',gender:'m'},
+  {emoji:'🛒',ar:'محل',tr:'ma7all',en:'shop / store',plural:'محلات',cat:'places',gender:'m'},
+  {emoji:'📚',ar:'مكتبة',tr:'maktaba',en:'library / bookstore',plural:'مكتبات',cat:'places',gender:'f'},
+  {emoji:'💊',ar:'صيدلية',tr:'Seydaiyya / Saydaiyya',en:'pharmacy',plural:'صيدليات',cat:'places',gender:'f'},
+  {emoji:'🏨',ar:'فندق',tr:'funduq / ooteel',en:'hotel',plural:'فنادق — fanaadiq',cat:'places',gender:'m'},
+  {emoji:'🌾',ar:'قرية',tr:'qilqilya / qarya',en:'village',plural:'قرى — qura',cat:'places',gender:'f'},
+  {emoji:'🏔️',ar:'وادي',tr:'waadi',en:'valley',plural:'أودية — awdiya',cat:'places',gender:'m'},
+];
+
+const ADJECTIVES = [
+  {emoji:'🐘',ar:'كبير / كبيرة',tr:'kbiir / kbiire',en:'big (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'🐭',ar:'صغير / صغيرة',tr:'zghiir / zghiire',en:'small (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'😍',ar:'حلو / حلوة',tr:'7elo / 7elwe',en:'nice / beautiful (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'😋',ar:'زاكي / زاكية',tr:'zaaki / zaakiye',en:'delicious (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'💸',ar:'رخيص / رخيصة',tr:'rkhiiS / rkhiiSa',en:'cheap (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'💎',ar:'غالي / غالية',tr:'ghaali / ghaaliya',en:'expensive (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'✨',ar:'جديد / جديدة',tr:'jdiid / jdiide',en:'new (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'🏛️',ar:'قديم / قديمة',tr:'2diim / 2diime',en:'old (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'🗺️',ar:'بعيد / بعيدة',tr:'b3iid / b3iide',en:'far (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'📍',ar:'قريب / قريبة',tr:'2ariib / 2ariibe',en:'near (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'⬆️',ar:'عالي / عالية',tr:'3aali / 3aaliye',en:'high / tall (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'🔓',ar:'فاضي / فاضية',tr:'faaDi / faaDiye',en:'free / empty / not busy (m/f)',cat:'adjectives',gender:'both'},
+  {emoji:'💥',ar:'خربان / خربانة',tr:'kharbaan / kharbaana',en:'broken / ruined (m/f)',cat:'adjectives',gender:'both'},
+];
+
+const PHRASES = [
+  {ar:'في القرية الكبيرة',tr:'fil qarya il kbiira',en:'in the big village',note:'fil = في + ال (in the)'},
+  {ar:'زرت',tr:'zurit / ziret',en:'I visited',note:'past tense verb — زار (to visit)'},
+  {ar:'سمعت',tr:'ismi3it / simi3it',en:'I heard',note:'past tense verb — سمع (to hear)'},
+  {ar:'أخبار',tr:'akhbaar',en:'news',note:'akhbaar is already plural!'},
+  {ar:'فش محل جنب المستشفى',tr:'fsh ma7al janb ilmostashfa',en:'there\'s no shop beside the hospital',note:'fsh = there is no (Palestinian dialect)'},
+  {ar:'كنت قلقانة',tr:'iqliqit / konit qalqaana',en:'I was worried (f)',note:'qalqaan (m) / qalqaana (f)'},
+  {ar:'كل اشي خربان',tr:'kull ishi kharbaan',en:'everything is ruined',note:'a dramatic but useful phrase!'},
+  {ar:'ورا',tr:'wara',en:'behind',note:'antonym: قدام guddaam (in front)'},
+  {ar:'قدام',tr:'guddaam / quddaam',en:'in front of',note:''},
+  {ar:'بين',tr:'bein / bain',en:'between',note:''},
+  {ar:'جنب',tr:'janb / jamb',en:'next to / beside',note:'very common direction word!'},
+  {ar:'أوستا',tr:'oosta / usta',en:'master craftsman (term of respect)',note:'used in the souk for skilled sellers'},
+  {ar:'يسلمو',tr:'yislamu / yislamo',en:'thank you (lit. may you be protected)',note:'beautiful Palestinian expression of gratitude'},
+  {ar:'بكم هاد؟',tr:'bkam haad? / bikam haad?',en:'how much is this?',note:'essential for the souk!'},
+  {ar:'هاد غالي',tr:'haad ghaali',en:'this is expensive',note:'start bargaining with this!'},
+];
+
+const EXTRAS = [
+  {emoji:'🐸',ar:'ضفدع',tr:'Dufda3',en:'frog',plural:'ضفادع — Dafaadi3',cat:'extras',gender:'m'},
+  {emoji:'🏔️',ar:'جبل',tr:'jabal',en:'mountain',plural:'جبال — jibaal',cat:'extras',gender:'m'},
+  {emoji:'😰',ar:'قلقان / قلقانة',tr:'qalqaan / qalqaana',en:'worried (m/f)',cat:'extras',gender:'both'},
+  {emoji:'🙏',ar:'ممنون / ممنونة',tr:'mamnoon / mamnoona',en:'grateful (m/f)',cat:'extras',gender:'both'},
+  {emoji:'💪',ar:'متحمس / متحمسة',tr:'mit7amis / mit7amsa',en:'excited / enthusiastic (m/f)',cat:'extras',gender:'both'},
+  {emoji:'📰',ar:'أخبار',tr:'akhbaar',en:'news',cat:'extras',gender:'m'},
+  {emoji:'🚶',ar:'أوستا',tr:'oosta / usta',en:'master craftsman (term of respect)',cat:'extras',gender:'m'},
+  {emoji:'🔑',ar:'مدخل',tr:'madkhal',en:'entrance',cat:'extras',gender:'m'},
+  {emoji:'🌊',ar:'ينبوع',tr:'yunboo3',en:'natural spring',cat:'extras',gender:'m'},
+];
+
+const PREPOSITIONS = [
+  {emoji:'⬆️',ar:'فوق',tr:'foog',en:'above / on top'},
+  {emoji:'⬇️',ar:'تحت',tr:'ta7it',en:'below / under'},
+  {emoji:'↔️',ar:'جنب',tr:'janb / jamb',en:'next to / beside'},
+  {emoji:'⬅️',ar:'عالشمال',tr:'3alishmaal',en:'on the left'},
+  {emoji:'➡️',ar:'عاليمين',tr:'3alyamin',en:'on the right'},
+  {emoji:'🔙',ar:'ورا',tr:'wara',en:'behind'},
+  {emoji:'⏩',ar:'قدام',tr:'guddaam / quddaam',en:'in front of'},
+  {emoji:'↕️',ar:'بين',tr:'bein / bain',en:'between'},
+  {emoji:'📦',ar:'جوا',tr:'juwwa',en:'inside'},
+  {emoji:'🌳',ar:'بره',tr:'barra',en:'outside'},
+];
+
+const COMPARATIVES = [
+  {adj:'كبير',meaning:'big',comp:'أكبر',compTr:'akbar',example:'هو أكبر جبل — the highest/biggest mountain'},
+  {adj:'صغير',meaning:'small',comp:'أصغر',compTr:'azghar / azgher',example:'هي أصغر منو — she is smaller than him'},
+  {adj:'غالي',meaning:'expensive',comp:'أغلى',compTr:'aghla',example:'هادا أغلى اشي في السوق — the most expensive thing in the market'},
+  {adj:'رخيص',meaning:'cheap',comp:'أرخص',compTr:'arkhas',example:'هادا أرخص من ذاك — this is cheaper than that'},
+  {adj:'بعيد',meaning:'far',comp:'أبعد',compTr:'ab3ad',example:'المستشفى أبعد من المدرسة — hospital is further than school'},
+  {adj:'قريب',meaning:'near',comp:'أقرب',compTr:'aqrab',example:'البيت أقرب من السوق — house is nearer than the market'},
+  {adj:'حلو',meaning:'nice',comp:'أحلى',compTr:'a7la',example:'هي أحلى بنت — she is the most beautiful girl'},
+  {adj:'زاكي',meaning:'delicious',comp:'أزكى',compTr:'azka',example:'الأكل أزكى من البيت — the food is more delicious than at home'},
+  {adj:'عالي',meaning:'high/tall',comp:'أعلى',compTr:'a3la',example:'أعلى جبل — the highest mountain'},
+  {adj:'فاضي',meaning:'free/empty',comp:'أفضى',compTr:'afDa',example:'إمبارح كنت أفضى من اليوم — I was more free yesterday'},
+];
+
+const FILL_Q = [
+  {display:'السوق <span class="blank"></span> من البيت.',en:'The market is farther from the house.',answers:['b3iid','b3eed','ba3iid','ba3eed','بعيد'],note:'بعيد b3iid — far (m) — market is masculine!'},
+  {display:'الحديقة <span class="blank"></span>.',en:'The park is nice/beautiful.',answers:['7elwe','helwe','7ilwe','hilwe','حلوة'],note:'حلوة 7elwe — nice (f) — park is feminine!'},
+  {display:'<span class="blank"></span> هاد؟',en:'How much is this? (in the market)',answers:['bkam','bikam','bkam haad','بكم'],note:'بكم bkam — how much? Essential for bargaining!'},
+  {display:'فش <span class="blank"></span> جنب المستشفى.',en:'There\'s no pharmacy beside the hospital.',answers:['seydaiyya','saydaiyya','Seydaiyya','Saydaiyya','صيدلية'],note:'صيدلية Seydaiyya — pharmacy'},
+  {display:'هاد <span class="blank"></span>، بدي أرخص.',en:'This is expensive, I want cheaper.',answers:['ghaali','ghali','غالي'],note:'غالي ghaali — expensive (m)'},
+  {display:'المدرسة <span class="blank"></span> من البيت.',en:'The school is newer than the house.',answers:['ajdad','ajdad min','أجدد'],note:'أجدد ajdad — newer / comparative of جديد'},
+];
+
+const OPEN_Q = [
+  {icon:'🗺️',q:'Describe where you live — is the hospital near or far? Is there a market?',try:'في حيّي في/فش ... — fil 7ayyi fi/fsh ...',hint:'fi 7ayyi fi beit kbiir o ma7all 2ariib o mustashfa b3iid! (In my neighbourhood there\'s a big house, near shop, and far hospital)'},
+  {icon:'💰',q:'You\'re in the souk. The vendor says the price. What do you say?',try:'بكم هاد؟ / هاد غالي / ...',hint:'Say: haad ghaali! (This is expensive!) Then: a3tiini b... (give me for...price). They\'ll love that you tried!'},
+  {icon:'😊',q:'Is your mood "faaDi" today or busy? Use an adjective to describe how you feel.',try:'أنا ... / ana ...',hint:'ana faaDiye (f) / faaDi (m) alyoom. Or: ana qalqaana/qalqaan — I\'m worried. Or: ana mit7amsa/mit7amis!'},
+];
+
+const QUIZ_Q_BASE = [
+  {q:'What does بيت mean?',ar:'بيت',tr:'beit',opts:['house / home','street','market','mosque'],a:'house / home',type:'ar_to_en',cat:'places'},
+  {q:'How do you say "school" in Palestinian Arabic?',opts:['مسجد masjid','مدرسة madrasa','مستشفى mustashfa','فندق funduq'],a:'مدرسة madrasa',type:'en_to_ar',cat:'places'},
+  {q:'What does "ghaali / ghaaliya" mean?',ar:'غالي / غالية',tr:'ghaali / ghaaliya',opts:['cheap','expensive','near','old'],a:'expensive',type:'ar_to_en',cat:'adjectives'},
+  {q:'Which word means "near" (masculine)?',opts:['b3iid','2ariib / 2ariibe','3aali','jdiid'],a:'2ariib / 2ariibe',type:'en_to_ar',cat:'adjectives'},
+  {q:'What is the feminine form of كبير (big)?',ar:'كبير → ?',opts:['كبيرا','كبيرة','كبيري','كبيرون'],a:'كبيرة',type:'ar_to_en',cat:'adjectives'},
+  {q:'How do you say "there\'s no shop beside the hospital"?',opts:['فش محل جنب المستشفى','في محل جنب المستشفى','محل قريب المستشفى','مستشفى جنب محل'],a:'فش محل جنب المستشفى',type:'en_to_ar',cat:'phrases'},
+  {q:'What does يسلمو mean?',ar:'يسلمو',tr:'yislamu',opts:['goodbye','how much?','thank you / may you be protected','welcome'],a:'thank you / may you be protected',type:'ar_to_en',cat:'phrases'},
+  {q:'How do you start bargaining in the souk?',opts:['هاد زاكي','بكم هاد؟','شكرا كتير','مع السلامة'],a:'بكم هاد؟',type:'en_to_ar',cat:'phrases'},
+  {q:'What does حديقة mean?',ar:'حديقة',tr:'7adiiqa',opts:['hospital','garden / park','pharmacy','library'],a:'garden / park',type:'ar_to_en',cat:'places'},
+  {q:'Adjectives in Arabic...',opts:['come before the noun','match the noun\'s gender','never change','must be short'],a:'match the noun\'s gender',type:'en_to_ar',cat:'grammar'},
+  {q:'The comparative of غالي (expensive) is...',opts:['أغلى','أكبر','أرخص','أجدد'],a:'أغلى',type:'ar_to_en',cat:'comparatives'},
+  {q:'What does فاضي / فاضية mean?',ar:'فاضي',tr:'faaDi',opts:['broken','free / not busy','new','delicious'],a:'free / not busy',type:'ar_to_en',cat:'adjectives'},
+  {q:'How do you say "I was worried" (feminine speaker)?',opts:['كنت قلقان','كنت قلقانة','أنا قلقانة','بقلق'],a:'كنت قلقانة',type:'en_to_ar',cat:'phrases'},
+  {q:'What does wara ورا mean?',ar:'ورا',tr:'wara',opts:['between','in front of','behind','next to'],a:'behind',type:'ar_to_en',cat:'prepositions'},
+  {q:'مطعم means...',ar:'مطعم',tr:'mat3am',opts:['market','hotel','restaurant','shop'],a:'restaurant',type:'ar_to_en',cat:'places'},
+  {q:'The plural of مدرسة (school) is...',opts:['مدارس madaaris','مدرسات','مدارسين','مدرسيات'],a:'مدارس madaaris',type:'ar_to_en',cat:'places'},
+  {q:'كل اشي خربان means...',ar:'كل اشي خربان',opts:['everything is beautiful','everything is expensive','everything is ruined','everything is new'],a:'everything is ruined',type:'ar_to_en',cat:'phrases'},
+  {q:'How do you say "the park is nice" (park is feminine)?',opts:['الحديقة حلو','الحديقة حلوة','الحديقة حلوي','الحديقة حلوان'],a:'الحديقة حلوة',type:'en_to_ar',cat:'grammar'},
+];
+
+const MATCH_DATA = {
+  places: [
+    {ar:'بيت',tr:'beit',en:'house'},
+    {ar:'مدرسة',tr:'madrasa',en:'school'},
+    {ar:'مستشفى',tr:'mustashfa',en:'hospital'},
+    {ar:'مسجد',tr:'masjid',en:'mosque'},
+    {ar:'حديقة',tr:'7adiiqa',en:'garden'},
+    {ar:'مطعم',tr:'mat3am',en:'restaurant'},
+    {ar:'صيدلية',tr:'Seydaiyya',en:'pharmacy'},
+    {ar:'مكتبة',tr:'maktaba',en:'library'},
+  ],
+  adj: [
+    {ar:'كبير',tr:'kbiir',en:'big (m)'},
+    {ar:'صغيرة',tr:'zghiire',en:'small (f)'},
+    {ar:'حلوة',tr:'7elwe',en:'nice (f)'},
+    {ar:'غالي',tr:'ghaali',en:'expensive (m)'},
+    {ar:'قريبة',tr:'2ariibe',en:'near (f)'},
+    {ar:'جديد',tr:'jdiid',en:'new (m)'},
+    {ar:'قديمة',tr:'2diime',en:'old (f)'},
+    {ar:'رخيص',tr:'rkhiiS',en:'cheap (m)'},
+  ],
+  mixed: [
+    {ar:'يسلمو',tr:'yislamu',en:'thank you'},
+    {ar:'بكم؟',tr:'bkam?',en:'how much?'},
+    {ar:'هاد غالي',tr:'haad ghaali',en:'this is expensive'},
+    {ar:'ورا',tr:'wara',en:'behind'},
+    {ar:'بين',tr:'bein',en:'between'},
+    {ar:'فش',tr:'fsh',en:'there is no'},
+    {ar:'قدام',tr:'guddaam',en:'in front of'},
+    {ar:'زاكي',tr:'zaaki',en:'delicious'},
+  ]
+};
+
+const RP_SCRIPT = [
+  {who:'areej',ar:'أهلاً وسهلاً! مرحبا بالسوق! بكم هاد الصابون؟',tr:'ahlan wa sahlan! marhaba bisuuq! bkam haad is-saaboon?',en:'Welcome! Welcome to the market! How much is this soap?'},
+  {who:'monica',fill:true,ar:'عشرون دينار.',tr:'3ishreen dinaar.',en:'Twenty dinars.',answer:'عشرون دينار',prompt:'Say the price in Arabic:'},
+  {who:'areej',ar:'آه، هاد صابون زيت الزيتون النابلسي — مشهور جداً!',tr:'aa, haad saaboon zeit izzaytoon innaablisi — mashhoor jiddan!',en:'Ah, this is Nabulsi olive oil soap — very famous!'},
+  {who:'monica',fill:true,ar:'هاد غالي، بدي أرخص.',tr:'haad ghaali, biddi arkhas.',en:'This is expensive, I want cheaper.',answer:'هاد غالي',prompt:'Say this is expensive:'},
+  {who:'areej',ar:'حلو، خمستعش دينار — آخر سعر!',tr:'7elo, khamistash dinaar — aakhir si3r!',en:'OK, fifteen dinars — final price!'},
+  {who:'monica',fill:true,ar:'يسلمو! شكراً كتير.',tr:'yislamu! shukran ktiir.',en:'Thank you so much! May you be protected.',answer:'يسلمو',prompt:'Say thank you (Palestinian style):'},
+  {who:'areej',ar:'يسلم بيتك وعيلتك! تعال تاني مرة!',tr:'yislem beitak wa 3eiltak! ta3al taani marra!',en:'May your home and family be safe! Come again!'},
+];
+
+// ═══════════════════════════════════════════
+//  FLASHCARD DATA (all combined)
+// ═══════════════════════════════════════════
+const ALL_CARDS = [
+  ...PLACES.map(p => ({...p, front:p.en, frontHint:'What is the Arabic for...', cat:p.cat||'places'})),
+  ...ADJECTIVES.map(a => ({...a, front:a.en, frontHint:'Arabic adjective for...', cat:'adjectives'})),
+  ...PHRASES.map((p,i) => ({emoji:'💬', ar:p.ar, tr:p.tr, en:p.en, front:p.en, frontHint:'Say this in Arabic:', cat:'phrases', note:p.note})),
+  ...EXTRAS.map(e => ({...e, front:e.en, frontHint:'Arabic word for...', cat:'extras'})),
+];
+
+// ═══════════════════════════════════════════
+//  NAV
+// ═══════════════════════════════════════════
+function showPage(id, tabEl) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  if (tabEl) tabEl.classList.add('active');
+  if (id === 'flashcards') renderCurrentCard();
+  if (id === 'exercises') { renderFills(); renderOpenProd(); }
+  if (id === 'roleplay') renderRoleplay();
+}
+
+function showPanel(id, el) {
+  const parent = el ? el.closest('.page') || el.parentElement.parentElement : document;
+  parent.querySelectorAll('.inner-panel').forEach(p => p.classList.remove('active'));
+  parent.querySelectorAll('.inner-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (el) el.classList.add('active');
+}
+
+// ═══════════════════════════════════════════
+//  VOCAB RENDER
+// ═══════════════════════════════════════════
+function renderVocabGrid(id, items) {
+  document.getElementById(id).innerHTML = items.map(w => `
+    <div class="vocab-card">
+      <div class="vc-emoji">${w.emoji||''}</div>
+      <div class="vc-ar ar">${w.ar}</div>
+      <div class="vc-tr">${w.tr}</div>
+      <div class="vc-en">${w.en}</div>
+      ${w.plural ? `<div class="vc-pl">pl: ${w.plural}</div>` : ''}
+    </div>`).join('');
+}
+
+function renderPhraseGrid(id, items) {
+  document.getElementById(id).innerHTML = items.map(p => `
+    <div class="phrase-card">
+      <div class="pc-en">${p.en}</div>
+      <div class="pc-ar ar">${p.ar}</div>
+      <div class="pc-tr">${p.tr}</div>
+      ${p.note ? `<div class="pc-note">💡 ${p.note}</div>` : ''}
+    </div>`).join('');
+}
+
+function renderAdjTable() {
+  document.getElementById('adj-table-body').innerHTML = ADJECTIVES.map(a => `
+    <tr>
+      <td>${a.emoji}</td>
+      <td>${a.en.replace(' (m/f)','')}</td>
+      <td><span class="adj-ar">${a.ar.split('/')[0].trim()}</span></td>
+      <td><span class="adj-ar">${a.ar.includes('/') ? a.ar.split('/')[1].trim() : '—'}</span></td>
+      <td style="font-size:13px;color:var(--ink2);font-style:italic;">${a.tr}</td>
+    </tr>`).join('');
+}
+
+const ADJ_EXAMPLES = [
+  {ar:'بيت كبير',tr:'beit kbiir',en:'a big house'},
+  {ar:'مدرسة كبيرة',tr:'madrasa kbiire',en:'a big school'},
+  {ar:'السوق قريب',tr:'issuuq 2ariib',en:'the market is near'},
+  {ar:'الحديقة حلوة',tr:'il7adeeqa 7elwe',en:'the park is nice'},
+  {ar:'الأكل زاكي',tr:'ilakl zaaki',en:'the food is delicious'},
+  {ar:'القهوة زاكية',tr:'ilqahwa zaakiye',en:'the coffee is delicious'},
+];
+
+function renderAdjExamples() {
+  document.getElementById('adj-examples').innerHTML = ADJ_EXAMPLES.map(e => `
+    <div class="phrase-card">
+      <div class="pc-ar ar">${e.ar}</div>
+      <div class="pc-tr">${e.tr}</div>
+      <div class="pc-en">${e.en}</div>
+    </div>`).join('');
+}
+
+function renderComparatives() {
+  document.getElementById('comp-grid-el').innerHTML = COMPARATIVES.map(c => `
+    <div class="comp-card">
+      <div><span class="comp-adj ar">${c.adj}</span><div style="font-size:12px;color:var(--ink2);">${c.meaning}</div></div>
+      <div style="text-align:center;font-size:1.5rem;color:var(--border);">→</div>
+      <div><span class="comp-comp ar">${c.comp}</span><div style="font-size:12px;color:var(--sage);font-style:italic;">${c.compTr}</div></div>
+      <div class="comp-ex">${c.example}</div>
+    </div>`).join('');
+}
+
+function renderPrepositions() {
+  document.getElementById('prep-grid-el').innerHTML = PREPOSITIONS.map(p => `
+    <div class="vocab-card" style="text-align:center;">
+      <div class="vc-emoji">${p.emoji}</div>
+      <div class="vc-ar ar">${p.ar}</div>
+      <div class="vc-tr">${p.tr}</div>
+      <div class="vc-en">${p.en}</div>
+    </div>`).join('');
+}
+
+function renderVerbConj() {
+  const verbs = [
+    {ar:'زار',name:'to visit',forms:[
+      {label:'I visited (past)',ar:'زرت',tr:'zurit / ziret'},
+      {label:'He visited',ar:'زار',tr:'zaar'},
+      {label:'She visited',ar:'زارت',tr:'zaarat'},
+      {label:'I visit (present)',ar:'بزور',tr:'bazoor'},
+    ]},
+    {ar:'سمع',name:'to hear',forms:[
+      {label:'I heard (past)',ar:'سمعت',tr:'ismi3it / simi3it'},
+      {label:'He heard',ar:'سمع',tr:'simi3'},
+      {label:'I hear (present)',ar:'بسمع',tr:'basma3'},
+      {label:'Sometimes I hear',ar:'أحياناً بسمع',tr:'a7yaanan basma3'},
+    ]},
+    {ar:'قلق',name:'to worry',forms:[
+      {label:'I was worried (f)',ar:'كنت قلقانة',tr:'konit qalqaana / iqliqit'},
+      {label:'I was worried (m)',ar:'كنت قلقان',tr:'konit qalqaan'},
+      {label:'I get worried',ar:'بقلق',tr:'baqlaq'},
+    ]},
+  ];
+  document.getElementById('verb-conj-el').innerHTML = verbs.map(v => `
+    <div class="verb-box">
+      <div class="verb-head">
+        <div><div class="ar">${v.ar}</div><div class="en">${v.name}</div></div>
+      </div>
+      <div class="verb-forms">
+        ${v.forms.map((f,i) => `
+          <div class="vf${i===0?' hi':''}">
+            <div class="vf-label">${f.label}</div>
+            <div class="vf-ar ar">${f.ar}</div>
+            <div class="vf-tr">${f.tr}</div>
+          </div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+
+// ═══════════════════════════════════════════
+//  FLASHCARDS
+// ═══════════════════════════════════════════
+let fcDeck = [...ALL_CARDS];
+let fcIdx = 0;
+let knownSet = new Set();
+let currentFilter = 'all';
+
+function setFcFilter(f, btn) {
+  document.querySelectorAll('.fc-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter = f;
+  if (f === 'all') fcDeck = [...ALL_CARDS];
+  else if (f === 'unknown') fcDeck = ALL_CARDS.filter(c => !knownSet.has(c.ar));
+  else fcDeck = ALL_CARDS.filter(c => c.cat === f);
+  fcIdx = 0;
+  document.getElementById('mainCard').classList.remove('flipped');
+  renderCurrentCard();
+}
+
+function renderCurrentCard() {
+  if (!fcDeck.length) return;
+  const c = fcDeck[fcIdx];
+  document.getElementById('fcEmoji').textContent = c.emoji || '📚';
+  document.getElementById('fcMain').textContent = c.front || c.en;
+  document.getElementById('fcCat').textContent = (c.cat||'').toUpperCase();
+  document.getElementById('fcFrontHint').textContent = c.frontHint || 'Tap to see Arabic';
+  document.getElementById('fcAr').textContent = c.ar;
+  document.getElementById('fcTr').textContent = c.tr;
+  document.getElementById('fcExtra').textContent = c.note || c.plural || '';
+  document.getElementById('fcGender').textContent = c.gender === 'f' ? '🔵 Feminine' : c.gender === 'm' ? '🟢 Masculine' : '';
+  document.getElementById('fcCount').textContent = `${fcIdx+1} / ${fcDeck.length}`;
+  document.getElementById('fcBarFill').style.width = `${((fcIdx+1)/fcDeck.length)*100}%`;
+  updateKnownCount();
+}
+
+function flipCard() {
+  document.getElementById('mainCard').classList.toggle('flipped');
+}
+
+function fcNav(d) {
+  document.getElementById('mainCard').classList.remove('flipped');
+  fcIdx = (fcIdx + d + fcDeck.length) % fcDeck.length;
+  renderCurrentCard();
+}
+
+function shuffleDeck() {
+  for (let i = fcDeck.length-1; i > 0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [fcDeck[i],fcDeck[j]] = [fcDeck[j],fcDeck[i]];
+  }
+  fcIdx = 0;
+  document.getElementById('mainCard').classList.remove('flipped');
+  renderCurrentCard();
+}
+
+function markKnown() {
+  if (!fcDeck.length) return;
+  const c = fcDeck[fcIdx];
+  knownSet.add(c.ar);
+  const btn = document.getElementById('knownBtn');
+  btn.textContent = '✅ Marked!';
+  btn.style.background = 'var(--sage)';
+  btn.style.color = 'white';
+  setTimeout(() => {
+    btn.textContent = '✓ I know this';
+    btn.style.background = '';
+    btn.style.color = '';
+  }, 800);
+  updateKnownCount();
+  if (fcIdx < fcDeck.length-1) setTimeout(() => fcNav(1), 400);
+}
+
+function updateKnownCount() {
+  const total = ALL_CARDS.length;
+  const known = knownSet.size;
+  document.getElementById('knownCount').textContent = known > 0 ? `✅ ${known} / ${total} marked as known` : '';
+}
+
+// ═══════════════════════════════════════════
+//  QUIZ
+// ═══════════════════════════════════════════
+let quizDeck = [];
+let quizIdx = 0;
+let quizScore = 0;
+let quizAnswered = false;
+let lastQuizMode = 'all';
+
+function startQuiz(mode, btnEl) {
+  lastQuizMode = mode;
+  document.querySelectorAll('.mode-pill').forEach(b => b.classList.remove('active'));
+  if (btnEl) btnEl.classList.add('active');
+
+  let pool = [...QUIZ_Q_BASE];
+  if (mode === 'places') pool = pool.filter(q => q.cat === 'places');
+  else if (mode === 'adjectives') pool = pool.filter(q => q.cat === 'adjectives');
+  else if (mode === 'ar_to_en') pool = pool.filter(q => q.type === 'ar_to_en');
+  else if (mode === 'en_to_ar') pool = pool.filter(q => q.type === 'en_to_ar');
+
+  pool = pool.sort(() => Math.random()-.5).slice(0, Math.min(10, pool.length));
+  quizDeck = pool;
+  quizIdx = 0; quizScore = 0; quizAnswered = false;
+
+  document.getElementById('quizStart').style.display = 'none';
+  document.getElementById('quizResult').style.display = 'none';
+  document.getElementById('quizArea').style.display = 'block';
+  renderQuizQ();
+}
+
+function renderQuizQ() {
+  const q = quizDeck[quizIdx];
+  document.getElementById('quizLabel').textContent = `Question ${quizIdx+1} of ${quizDeck.length}`;
+  document.getElementById('quizScoreLive').textContent = `Score: ${quizScore}`;
+  document.getElementById('quizBar').style.width = `${(quizIdx/quizDeck.length)*100}%`;
+
+  let qHtml = q.q;
+  if (q.ar) qHtml = `<span class="ar-big">${q.ar}</span>`;
+  if (q.tr) qHtml += `<span style="font-size:13px;color:var(--ink3);font-style:italic;display:block;margin-top:4px;">${q.tr}</span>`;
+  document.getElementById('quizQ').innerHTML = qHtml;
+  document.getElementById('quizPrompt').textContent = q.type === 'en_to_ar' ? 'Which is the Arabic?' : q.q || 'What does this mean?';
+  document.getElementById('quizFb').className = 'quiz-fb';
+
+  const opts = document.getElementById('quizOpts');
+  opts.innerHTML = '';
+  const shuffled = [...q.opts].sort(() => Math.random()-.5);
+  shuffled.forEach(opt => {
+    const b = document.createElement('button');
+    b.className = 'quiz-opt';
+    b.innerHTML = `<span class="ar">${opt}</span>`;
+    // check if opt looks like arabic
+    if (!/[\u0600-\u06FF]/.test(opt)) b.innerHTML = opt;
+    b.onclick = () => answerQuiz(b, opt, q.a);
+    opts.appendChild(b);
+  });
+  quizAnswered = false;
+}
+
+function answerQuiz(btn, chosen, correct) {
+  if (quizAnswered) return;
+  quizAnswered = true;
+  const isRight = chosen === correct;
+  if (isRight) quizScore++;
+  document.querySelectorAll('.quiz-opt').forEach(b => {
+    b.disabled = true;
+    if (b.innerHTML === correct || b.textContent.trim() === correct) b.classList.add('correct');
+    else if (b === btn && !isRight) b.classList.add('wrong');
+  });
+  const fb = document.getElementById('quizFb');
+  fb.className = 'quiz-fb show ' + (isRight ? 'correct' : 'wrong');
+  fb.innerHTML = isRight
+    ? `✅ صح! Correct — ${quizDeck[quizIdx].note || ''}`
+    : `❌ The answer was: <strong>"${correct}"</strong>`;
+  setTimeout(() => {
+    quizIdx++;
+    if (quizIdx >= quizDeck.length) showQuizResult();
+    else renderQuizQ();
+  }, 1500);
+}
+
+function showQuizResult() {
+  document.getElementById('quizArea').style.display = 'none';
+  document.getElementById('quizResult').style.display = 'block';
+  document.getElementById('quizBar').style.width = '100%';
+  const pct = Math.round(quizScore/quizDeck.length*100);
+  document.getElementById('resScore').textContent = `${quizScore}/${quizDeck.length}`;
+  let praise, sub;
+  if (pct === 100) {praise='🌟 مثالي! Perfect!';sub="Areej would be so proud — you're a star!";}
+  else if (pct >= 80) {praise='💪 ممتاز! Excellent!';sub='Really getting it. Review the ones you missed!';}
+  else if (pct >= 60) {praise='🙂 كويس! Good job!';sub='On the right track — flashcards again then retry!';}
+  else {praise='🌱 Keep going!';sub='Practice makes perfect. Review vocab first, then try again!';}
+  document.getElementById('resPraise').textContent = praise;
+  document.getElementById('resSub').textContent = sub;
+}
+
+// ═══════════════════════════════════════════
+//  MATCH
+// ═══════════════════════════════════════════
+let selLeft = null, selRight = null, matchedCount = 0;
+let matchPool = [];
+let currentMatchCat = 'places';
+
+function startMatch(cat) {
+  currentMatchCat = cat;
+  selLeft = null; selRight = null; matchedCount = 0;
+  document.getElementById('matchResult').style.display = 'none';
+  const pool = [...(MATCH_DATA[cat]||MATCH_DATA.places)].sort(() => Math.random()-.5).slice(0,6);
+  matchPool = pool;
+  const rights = [...pool].sort(() => Math.random()-.5);
+  const lCol = document.getElementById('matchLeft');
+  const rCol = document.getElementById('matchRight');
+  lCol.innerHTML = ''; rCol.innerHTML = '';
+  pool.forEach(p => {
+    const d = document.createElement('div');
+    d.className = 'match-item arabic-item';
+    d.dataset.id = p.ar;
+    d.dataset.side = 'left';
+    d.innerHTML = `${p.ar}<br><span style="font-size:11px;font-style:italic;direction:ltr;font-family:sans-serif;opacity:.6;">${p.tr}</span>`;
+    d.onclick = () => selectMatch(d);
+    lCol.appendChild(d);
+  });
+  rights.forEach(p => {
+    const d = document.createElement('div');
+    d.className = 'match-item';
+    d.dataset.id = p.ar;
+    d.dataset.side = 'right';
+    d.textContent = p.en;
+    d.onclick = () => selectMatch(d);
+    rCol.appendChild(d);
+  });
+}
+
+function selectMatch(el) {
+  if (el.classList.contains('matched') || el.classList.contains('disabled')) return;
+  const side = el.dataset.side;
+  if (side === 'left') {
+    if (selLeft) selLeft.classList.remove('selected');
+    selLeft = el; el.classList.add('selected');
+  } else {
+    if (selRight) selRight.classList.remove('selected');
+    selRight = el; el.classList.add('selected');
+  }
+  if (selLeft && selRight) {
+    if (selLeft.dataset.id === selRight.dataset.id) {
+      selLeft.classList.remove('selected'); selLeft.classList.add('matched');
+      selRight.classList.remove('selected'); selRight.classList.add('matched');
+      selLeft = null; selRight = null; matchedCount++;
+      if (matchedCount === matchPool.length) document.getElementById('matchResult').style.display = 'block';
+    } else {
+      const l = selLeft, r = selRight;
+      l.classList.add('wrong-flash'); r.classList.add('wrong-flash');
+      setTimeout(() => {
+        l.classList.remove('selected','wrong-flash');
+        r.classList.remove('selected','wrong-flash');
+      }, 600);
+      selLeft = null; selRight = null;
+    }
+  }
+}
+
+function resetCurrentMatch() {
+  document.getElementById('matchResult').style.display = 'none';
+  startMatch(currentMatchCat);
+}
+
+// ═══════════════════════════════════════════
+//  FILL BLANKS
+// ═══════════════════════════════════════════
+function renderFills() {
+  const c = document.getElementById('fillContainer');
+  c.innerHTML = FILL_Q.map((q,i) => `
+    <div style="margin-bottom:1.1rem;">
+      <div class="fill-q">${q.en}</div>
+      <div class="fill-q ar" style="font-size:1.15rem;margin-bottom:.5rem;">${q.display}</div>
+      <input class="fill-inp" id="fi-${i}" placeholder="Type transliteration…" onkeydown="if(event.key==='Enter')checkFills()">
+      <div class="fill-fb" id="ff-${i}"></div>
+    </div>`).join('');
+}
+
+function normalizeAns(s) {
+  return s.toLowerCase().replace(/[\s'`']/g,'').replace(/[^a-z0-9\u0600-\u06FF]/g,'').trim();
+}
+
+function checkFills() {
+  FILL_Q.forEach((q,i) => {
+    const inp = document.getElementById(`fi-${i}`);
+    const fb = document.getElementById(`ff-${i}`);
+    const val = normalizeAns(inp.value);
+    const ok = q.answers.some(a => normalizeAns(a) === val);
+    inp.className = 'fill-inp ' + (ok ? 'correct' : 'wrong');
+    fb.className = 'fill-fb show ' + (ok ? 'correct' : 'wrong');
+    fb.innerHTML = ok
+      ? `✅ يلا! Correct — ${q.note}`
+      : `❌ Not quite. ${q.note}<br><em>Accepted: ${q.answers.filter(a => !/[\u0600-\u06FF]/.test(a)).join(', ')}</em>`;
+  });
+}
+
+function resetFills() {
+  FILL_Q.forEach((q,i) => {
+    const inp = document.getElementById(`fi-${i}`);
+    const fb = document.getElementById(`ff-${i}`);
+    inp.value = ''; inp.className = 'fill-inp';
+    fb.className = 'fill-fb';
+  });
+}
+
+// ═══════════════════════════════════════════
+//  OPEN PRODUCTION
+// ═══════════════════════════════════════════
+function renderOpenProd() {
+  document.getElementById('openProd').innerHTML = OPEN_Q.map((q,i) => `
+    <div style="margin-bottom:1rem;">
+      <div style="display:flex;gap:.65rem;align-items:flex-start;margin-bottom:.5rem;">
+        <span style="font-size:24px;">${q.icon}</span>
+        <div>
+          <div style="font-weight:700;font-size:14.5px;margin-bottom:3px;">${q.q}</div>
+          <div style="font-size:12.5px;color:var(--ink3);font-style:italic;">Try: ${q.try}</div>
+        </div>
+      </div>
+      <button class="btn btn-sec btn-sm" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">
+        💡 Reveal Areej's hint
+      </button>
+      <div style="display:none;background:var(--gold-bg);border:1.5px solid var(--gold-border);border-radius:8px;padding:.65rem .9rem;font-size:13.5px;color:#7A5000;margin-top:4px;">
+        <strong>Areej says:</strong> ${q.hint}
+      </div>
+    </div>`).join('');
+}
+
+// ═══════════════════════════════════════════
+//  ROLEPLAY
+// ═══════════════════════════════════════════
+function renderRoleplay() {
+  const c = document.getElementById('rpChat');
+  c.innerHTML = '';
+  RP_SCRIPT.forEach(line => {
+    const wrap = document.createElement('div');
+    wrap.className = 'rp-wrap' + (line.who === 'monica' ? ' right' : '');
+    const isAreej = line.who === 'areej';
+    wrap.innerHTML = `
+      <div class="rp-av ${isAreej ? 'av-t' : 'av-s'}">${isAreej ? '👩‍🏫' : '🙋'}</div>
+      <div class="rp-bubble">
+        <div class="rp-name">${isAreej ? 'Areej 🇵🇸' : 'Monica 🙋'}</div>
+        ${line.fill ? `
+          <div class="rp-fill">
+            <div class="rp-fill-label">📝 ${line.prompt || 'Fill in your line:'}</div>
+            <div class="rp-ar ar">${line.ar}</div>
+            <div class="rp-tr">${line.tr}</div>
+            <div class="rp-en">${line.en}</div>
+            <button class="btn btn-sec btn-sm" style="margin-top:8px;" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">
+              Reveal answer
+            </button>
+            <div style="display:none;margin-top:6px;font-size:13.5px;background:var(--sage-bg);color:var(--sage);padding:6px 10px;border-radius:6px;font-weight:700;">
+              ✅ ${line.answer} — ${line.tr}
+            </div>
+          </div>` : `
+          <div class="rp-ar ar">${line.ar}</div>
+          <div class="rp-tr">${line.tr}</div>
+          <div class="rp-en">${line.en}</div>`}
+      </div>`;
+    c.appendChild(wrap);
+  });
+}
+
+// ═══════════════════════════════════════════
+//  KEYBOARD
+// ═══════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (document.getElementById('page-flashcards').classList.contains('active')) {
+    if (e.key === 'ArrowRight') fcNav(1);
+    if (e.key === 'ArrowLeft') fcNav(-1);
+    if (e.key === ' ') { e.preventDefault(); flipCard(); }
+    if (e.key === 'Enter') markKnown();
+  }
+});
+
+// ═══════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════
+function init() {
+  renderVocabGrid('vg-places', PLACES);
+  renderVocabGrid('vg-adj', ADJECTIVES);
+  renderPhraseGrid('pg-phrases', PHRASES);
+  renderVocabGrid('vg-extras', EXTRAS);
+  renderAdjTable();
+  renderAdjExamples();
+  renderComparatives();
+  renderPrepositions();
+  renderVerbConj();
+  renderCurrentCard();
+  renderFills();
+  renderOpenProd();
+  renderRoleplay();
+  startMatch('places');
+}
+
+init();
+</script>
+</body>
+</html>
