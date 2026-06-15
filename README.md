@@ -47,22 +47,3 @@ Language is nothing without its people. This section is styled like an integrate
 
 ### 9. 🏡 The Homework Desk & Review Panel
 To wrap up their study loop, students can type translation prompts directly into responsive text boxes. When they hit "Submit," a smart validation system grades their sentence construction on the spot. And don't worry—if they accidentally hit an extra space bar or omitted a trailing punctuation mark, the app uses built-in fuzzy-matching to ignore the minor syntax typo and give them the credit they deserve!
-
----
-
-## 🛠️ Technical Architecture
-
-This hub is engineered as a zero-dependency **Single Page Application (SPA)** utilizing fundamental front-end web technologies:
-*   **HTML5 & CSS3:** Structural semantics paired with advanced animations for the 3D card-flipping mechanics, responsive flex/grid layouts, global theme variables, and active tab transitions.
-*   **Vanilla JavaScript (ES6+):** Pure client-side logic utilizing a robust, multi-dimensional array ecosystem. It manages quiz states, filters active vocabulary lists by lesson categories, tracks metrics, and provides automated text validation entirely inside the user's browser without demanding external databases or servers.
-
----
-
-## 🚀 Getting Started / Installation
-
-Because this application runs entirely on client-side code, it requires **no compilation, no local servers, and no dependencies**.
-
-1.  **Download the project file:** Ensure your application file is saved with an `.html` extension (e.g., `arabic-with-areej-v2.html`).
-2.  **Launch the application:** Double-click the file to launch it directly inside any modern web browser (Chrome, Firefox, Safari, Edge).
-3.  **Study & Practice:** Toggle through the navigation headers seamlessly to explore your multi-lesson content!
-
