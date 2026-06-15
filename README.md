@@ -66,17 +66,3 @@ Because this application runs entirely on client-side code, it requires **no com
 2.  **Launch the application:** Double-click the file to launch it directly inside any modern web browser (Chrome, Firefox, Safari, Edge).
 3.  **Study & Practice:** Toggle through the navigation headers seamlessly to explore your multi-lesson content!
 
----
-
-## 📂 Suggested Directory Layout
-
-To manage and expand this app across an expanding A2 curriculum, the recommended structural layout on GitHub is:
-
-```text
-arabic-with-areej/
-│
-├── arabic-with-areej-v2.html   # Main application file (Core A2 Practice Suite)
-├── README.md                   # This project documentation and guide
-└── assets/                     # Optional directory for external media
-    ├── images/                 # Cultural diagrams, infographics, or map assets
-    └── audio/                  # Future native audio pronunciation clips
